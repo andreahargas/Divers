@@ -10,6 +10,8 @@
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME ICON -->
+    <script src="https://kit.fontawesome.com/6048c5f782.js" crossorigin="anonymous"></script>
 
     <title>Divers</title>
 </head>
@@ -17,34 +19,111 @@
 
     <!-- HEADER -->
     <header>
-
         <nav class="navbar">
-            <div class="menu-btn">
-                <div class="menu-icon bg-secondary"></div>
+
+            <!--  MENU -->
+            <div class="menu-container">
+                <div class="menu-btn">
+                    <div class="menu-icon bg-secondary"></div>
+                </div>
+
+                <!-- SIDE MENU -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link text-primary bg-dark font-weight-bold home">HOME</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">PAGES<i class="fas fa-chevron-down"></i></a>
+                        
+                        <ul class="nested-links pages-links">
+                            <li class="list-unstyled"><a href="#" class="text-secondary">ABOUT US</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">WHAT WE OFFER</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">OUR TEAM</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">TESTIMONIALS</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">PRICING LIST</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">BLOG<i class="fas fa-chevron-down"></i></a>
+                        
+                        <ul class="nested-links blog-links">
+                            <li class="list-unstyled"><a href="#" class="text-secondary">GRID BLOG</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">BLOG LIST</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">BLOG POST</a></li>
+                         </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">GALLERY<i class="fas fa-chevron-down"></i></a>
+                        
+                        <ul class="nested-links gallery-links">
+                            <li class="list-unstyled"><a href="#" class="text-secondary">GRID GALLERY</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">GRID FULLWIDTH GALLERY</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">MASONRY GALLERY</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">MASONRY FULLWIDTH GALLERY</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">ELEMENTS<i class="fas fa-chevron-down"></i></a>
+                        
+                        <ul class="nested-links elements-links">
+                            <li class="list-unstyled"><a href="#" class="text-secondary">TYPOGRAPHY</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">ICON LIST</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">PROGRESS BARS</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">BUTTONS</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">TABLES</a></li>
+                            <li class="list-unstyled"><a href="#" class="text-secondary">FORMS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">CONTACTS</a></li>
+                </ul>
+                <!-- END OF SIDE MENU -->
             </div>
+            <!-- END OF MENU -->
+            
+            <!-- LOGO -->
             <img src="img/logo.png" alt="logo" class="logo">
-            <div class="search-icon"></div>
-            <div class="language-icon text-primary bg-dark d-flex justify-content-center align-items-center">en</div>
-            <div class="contact-btn d-flex align-items-center justify-content-center">
-                <div class="contact-icon bg-secondary"></div>
+            <!-- END OF LOGO -->
+
+            <!-- SEARCH -->
+            <div class="search-container">
+                <div class="search-icon"></div>
+                
+                <!-- SEARCH MENU -->
+                <div class="search-menu d-flex align-items-center justify-content-between">
+                    <textarea placeholder="Search..." class="d-flex align-items-center" style="overflow:hidden"></textarea>
+                    <div class="search-icon search-menu-icon"></div>
+                </div>
+                <!-- END OF SEARCH MENU -->
             </div>
+            <!-- END OF SEARCH  -->
+
+
+            <!-- LANGUAGE -->
+            <div class="language-container">
+                <div class="language-icon text-primary bg-dark d-flex justify-content-center align-items-center">en</div>
+
+                <!-- LANGUAGE MENU -->
+                <div class="language-menu bg-primary d-flex justify-content-center align-items-center">
+                    <ul>
+                         <li class="language list-unstyled text-danger active">en</li>
+                         <li class="language list-unstyled text-danger">fr</li>
+                        <li class="language list-unstyled text-danger">es</li>
+                     </ul>
+                </div> 
+                 <!-- END OF LANGUAGE MENU -->
+            </div>
+            <!-- END OF LANGUAGE -->
+
+            <!-- CONTACT -->            
+            <div class="contact-container">
+                <div class="contact-btn d-flex align-items-center justify-content-center">
+                    <div class="contact-icon bg-secondary"></div>
+                </div>
+
+                <!-- CONTACT MENU -->
+                <div class="contact-menu bg-primary d-flex flex-column align-items-center justify-content-center">
+                    <p class="text-danger"><span class="font-weight-bold text-dark">Call us:</span> +1 (844) 123 456 78</p>
+                    <p class="text-danger">info@demolink.org</p>
+                </div>
+                <!-- END OF CONTACT MENU -->
+            </div>
+            <!-- END OF CONTACT -->
         </nav>
 
-        <!-- <div class="carousel-container">
-            
-            <div class="carousel-slide">
-                <img src="img/header-img.jpeg" alt="carousel-img" class="carousel-img-1">
-                <img src="img/header-img2.jpg" alt="carousel-img" class="carousel-img-2">
-            </div>       
-            
-            <button class="carousel-button">prev</button>
-            <button class="carousel-button">next</button>
-
-            <div class="carousel-nav">
-                <button class="carousel-indicatior"></button>
-                <button class="carousel-indicatior"></button>
-            </div>
-        </div> -->
     </header>
 
 
@@ -68,9 +147,6 @@
 
     <!-- JAVASCRIPT -->
     <script src="js/header.js"></script>  
-
-    <!-- BOOTSTRAP -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
+ 
 </body>
 </html>

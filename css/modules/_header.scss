@@ -16,7 +16,7 @@
 //   }
 // }
 
-//NAV BUTTONS, ICONS//
+//NAV BUTTONS, ICONS STYLE//
 .menu-btn {
   display: flex;
   align-items: center;
@@ -70,6 +70,8 @@
   margin-bottom: 0.5em;
   position: relative;
   cursor: pointer;
+  transform: rotateZ(0);
+    @include transition;
 
   &::after {
     content: "";
@@ -92,6 +94,26 @@
       @include transition;
     }
   }
+
+  &.open{
+    height: 25px;
+    width: 25px;
+    border-radius: 20px;
+    transform: rotateZ(360deg);
+    @include transition;
+
+    &::after{
+     @extend .search-icon::after;
+     top: 10px;
+     left: 6px;
+    }
+    &::before{
+     @extend .search-icon::after;
+     transform: skewY(-45deg);
+     top: 10px;
+     left: 6px;
+    }
+  }
 }
 
 .language-icon {
@@ -99,50 +121,223 @@
   width: 2em;
   border-radius: 1.5em;
   cursor: pointer;
+  position: relative;
 }
 
-.contact-btn{
-    width: 5px;
-    height: 22px;
-    cursor: pointer;
+.contact-btn {
+  width: 5px;
+  height: 22px;
+  cursor: pointer;
 
-    .contact-icon {
+  .contact-icon {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    position: relative;
+
+    &::before {
+      content: "";
       width: 5px;
       height: 5px;
       border-radius: 5px;
-      position: relative;
-    
+      background-color: map-get($colors, secondary);
+      position: absolute;
+      top: -8px;
+      @include transition;
+    }
+    &::after {
+      @extend .contact-icon::before;
+      top: 8px;
+    }
+
+    &.open {
+      width: 4px;
+      height: 4px;
+
       &::before {
-        content: "";
-        width: 5px;
-        height: 5px;
-        border-radius: 5px;
-        background-color: map-get($colors, secondary);
-        position: absolute;
-        top: -8px;
+        @extend .contact-icon::after;
+        @extend .contact-icon.open;
         @include transition;
       }
+
       &::after {
         @extend .contact-icon::before;
-        top: 8px;
+        @extend .contact-icon.open;
+        @include transition;
       }
-    
-      &.open {
-        width: 4px;
-        height: 4px;
-        
-        &::before{
-            @extend .contact-icon::after;
-            @extend .contact-icon.open;
-            @include transition;
-        }
+    }
+  }
+}
+//END OF NAV BUTTONS, ICONS//
 
-        &::after{
-            @extend .contact-icon::before;
-            @extend .contact-icon.open;
-            @include transition;
+// SIDE MENU //
+.navbar-nav {
+  padding: 1rem 0;
+  @include box-shadow;
+  height: 100vh;
+  width: 85vw;
+  position: fixed;
+  top: 3.8125rem;
+  left: 0;
+  transform: translateX(-110%);
+  @include transition;
+
+  &.open {
+    transform: translateX(0);
+    @include transition;
+  }
+
+  .nav-item {
+    position: relative;
+    margin-bottom: 0.2rem;
+
+    .nav-link {
+      font-size: 0.75rem;
+      padding-left: 0.8rem;
+
+      &:hover {
+        text-decoration: none;
+        color: map-get($colors, primary) !important;
+        background-color: map-get($colors, dark);
+        @include transition;
+      }
+
+      &.open {
+        @extend .nav-link:hover;
+      }
+
+      i {
+        display: inline-block;
+        font-size: 0.75rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 0.8rem;
+        cursor: pointer;
+        transform: rotateZ(0deg);
+        @include transition;
+
+        &.open {
+          transform: rotateZ(180deg);
+          @include transition;
         }
       }
     }
+
+    .nested-links {
+      display: none;
+      padding: 0;
+
+      &.open {
+        display: inline;
+      }
+
+      a {
+        display: inline-block;
+        width: 100%;
+        margin-top: 0.2rem;
+        padding: 0.5rem;
+        padding-left: 1.6rem;
+        font-size: 0.75rem;
+
+        &:hover {
+          @extend .nav-link:hover;
+        }
+      }
+    }
+  }
 }
-//END OF NAV BUTTONS, ICONS//
+// END OF SIDE MENU //
+
+// SEARCH MENU //
+.search-menu {
+  height: 3rem;
+  width: 100vw;
+  position: absolute;
+  top: 3.8125rem;
+  left: 0;
+  @include box-shadow;
+  z-index: -1;
+  transform: translateY(-30%);
+  opacity: 0;
+  @include transition;
+
+  &.open{
+    transform: translateY(0);
+    opacity: 100%;
+    @include transition;
+  }
+
+  textarea{
+    height: 100%;
+    width: 80%;
+    resize: none;
+    border: none;
+    padding: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .search-menu-icon{
+    margin-right: 1rem;
+  }
+}
+// END OF SEARCH MENU //
+
+// LANGUAGE MENU //
+.language-menu{
+  position: absolute;
+  top: 3.5em;
+  width: 2em;
+  text-align: center;
+  display: none !important;
+  @include box-shadow;
+
+  &.open{
+    display: flex !important;
+  }
+
+  ul{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    li.language{
+      padding: 0.25em; 
+
+      &.active{
+        background-color: map-get($colors, dark);
+        color: map-get($colors, primary) !important;
+      }
+      
+    }
+  }
+}
+// END OF LANGUAGE MENU //
+
+// CONTACT MENU //
+.contact-menu{
+  position: absolute;
+  right: 0;
+  top: 3.8125rem;
+  @include box-shadow;
+  text-align: center;
+  width: 80vw;
+  height: 5rem;
+  z-index: -1;
+  transform: translateY(-30%);
+  opacity: 0;
+  @include transition;
+
+  &.open{
+    transform: translateY(0);
+    opacity: 100%;
+    @include transition;
+  }
+
+  p{
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+
+}
+// END OF CONTACT MENU //
