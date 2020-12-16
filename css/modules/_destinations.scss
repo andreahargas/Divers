@@ -1,0 +1,85 @@
+.destinations {
+  position: relative;
+  padding-bottom: 4.7rem;
+
+  .destinations-title {
+    font-size: 1.375rem;
+    margin-top: 3rem;
+  }
+
+.destinations-items-container{
+
+    &.right {
+        transform: translateX(-66.66666667%);
+        @include transition;
+        transition-duration: 0.2s;
+      }
+    
+      &.middle {
+        transform: translateX(-33.333333334%);
+        @include transition;
+        transition-duration: 0.2s;
+      }
+    
+      &.left {
+        transform: translateX(0);
+        @include transition;
+        transition-duration: 0.2s;
+      }
+
+  .destinations-item {
+    width: 100vw;
+
+    img {
+      width: 90vw;
+      border: 0.5px solid map-get($colors, light);
+      padding: 0.625rem;
+      margin-top: 2rem;
+    }
+
+    .destinations-item-title {
+      font-size: 1.125rem;
+      margin-top: 1.5rem;
+    }
+
+    .destinations-item-description {
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .book-now-btn {
+      display: inline-block;
+      font-size: 0.875rem;
+      margin-top: 1rem;
+      border-bottom: 2px solid map-get($colors, info);
+      padding-bottom: 0.2rem;
+
+      &:hover {
+        text-decoration: none;
+        color: map-get($colors, dark) !important;
+        border-bottom: 2px solid map-get($colors, darl);
+        @include transition;
+      }
+    }
+  }
+} 
+
+  .destinations-slider-buttons-container {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 4.7rem;
+
+    .destinations-slider-button {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        margin: 0.5rem;
+        cursor: pointer;
+    
+        &.active {
+          background-color: map-get($colors, dark) !important;
+        }
+      }
+  }
+}
