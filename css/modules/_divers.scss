@@ -49,7 +49,8 @@
 }
 
 .divers-description{
-    padding: 2rem 1rem;
+    padding: 0rem 1rem;
+    margin-top: 2rem;
 
     .divers-description-title{
         font-size: 1.375rem;
@@ -102,9 +103,11 @@
 }
 
 .divers-icons{
-    margin: 1rem;
 
     .divers-icons-item{
+        border: 0.5px solid map-get($colors, light);
+        padding: 1rem;
+        margin: 2rem 1rem;
 
         img{
             margin-bottom: 0.5rem;
@@ -117,10 +120,6 @@
         .divers-icons-description{
             font-size: 0.8125rem;
             margin: 0;
-        }
-
-        border: 0.5px solid map-get($colors, light);
-        padding: 1rem;
-        margin: 2rem 0;
+        }        
     }
 }
