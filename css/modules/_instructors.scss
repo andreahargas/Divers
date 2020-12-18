@@ -1,0 +1,82 @@
+.instructors{
+    padding-bottom: 2rem;
+
+    .instructors-title{
+        font-size: 1.375rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .instructors-items-container{
+        position: relative;
+
+        .instructors-item{
+        
+            h3{
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+        
+            p{
+                font-size: 0.8125rem;
+                padding: 0 2rem;
+            }
+        
+            .social-icons-container{
+                a{
+                    margin: 0 0.5rem;
+                    margin-bottom: 2rem;
+        
+                    i{
+                        &:hover{
+                            color: map-get($colors, dark) !important;
+                            @include transition;
+                        }
+                    }
+                }
+            }
+
+            &.active{
+                transform: translateX(0);
+                @include transition;
+                opacity: 1;
+            }
+
+            &.prev{
+                transform: translateX(-100%);
+                @include transition;
+                opacity: 0;
+            }
+            &.next{
+                transform: translateX(100%);
+                @include transition;
+                opacity: 0;
+            }
+
+        }
+
+        .instructors-item-hidden{
+            position: absolute;
+            top: 0;
+            transform: translateX(100%);
+        }
+    }
+
+
+    .instructors-slider-buttons-container {
+        width: 100%;
+        height: 4.7rem;
+    
+        .instructors-slider-button {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            margin: 0.5rem;
+            cursor: pointer;
+        
+            &.active {
+              background-color: map-get($colors, dark) !important;
+            }
+          }
+      }
+}
