@@ -1,0 +1,22 @@
+.qualities{
+    background: map-get($colors, sectionBackground);
+    padding: 3rem 1rem;
+
+    img{
+        margin-top: 2rem;
+        height: 3.75rem;
+    }
+
+    .qualities-title{
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 1.125rem;
+    }
+
+    .qualities-description{
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        line-height: 1.5rem;
+    }
+
+}

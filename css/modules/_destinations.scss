@@ -29,9 +29,10 @@
 
   .destinations-item {
     width: 100vw;
+    max-width: 100% !important;
 
     img {
-      width: 90vw;
+      width: 90%;
       border: 0.5px solid map-get($colors, light);
       padding: 0.625rem;
       margin-top: 2rem;

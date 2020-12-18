@@ -11,6 +11,8 @@ $(function(){
     $(".nav-link").each(function(){
 
         $(this).on("click", function(){
+            $(".nav-link, .nested-links, .nav-link i").not(this).not($(this).parent().children("ul")).not($(this).children("i")).removeClass("open")
+
             $(this).parent().children("ul").toggleClass("open");
             $(this).children("i").toggleClass("open");
             $(this).toggleClass("open");        
