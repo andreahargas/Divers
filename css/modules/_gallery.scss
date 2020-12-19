@@ -1,68 +1,65 @@
-.gallery {
-  .gallery-title {
-    font-size: 1.375rem;
-    padding-top: 2rem;
-  }
-
-  .gallery-img {
-    background: map-get($colors, sectionBackground);
-    margin: 2rem 1.5rem;
-    padding-bottom: 0.5rem;
-
-    img {
-      width: 100%;
-    }
-    h3 {
-      font-size: 1rem;
-      padding-top: 1rem;
-    }
-
-    .search-icon-container {
-      height: 3rem;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 100%;
-      margin: 1rem auto;
-      cursor: pointer;      
-
-      .gallery-search-icon{
-        border: 2px solid map-get($colors, primary);
-        margin-right: 0.4rem;
-        border-radius: 10px;
-        height: 20px;
-        width: 20px;
-        margin-bottom: 0.5em;
-        cursor: pointer;
-        position: relative;
-      
-        &::after {
-          content: "";
-          position: absolute;
-          top: 20px;
-          left: 15px;
-          background-color: map-get($colors, primary);
-          width: 8px;
-          height: 1.5px;
-          transform: skewY(45deg);
-        }
-      }
-
-      &:hover{
-        background: map-get($colors, success) !important;
-        @include transition;
-
-        .gallery-search-icon{          
-          border: 2px solid map-get($colors, secondary);
-          @include transition;
-          transition-duration: 0.2s;
-
-          &::after{
-            background-color: map-get($colors, secondary);
-            @include transition;
-        }
-          
-        }
-      }
-  }
+.gallery-title {
+  font-size: 1.375rem;
+  padding-top: 2rem;
 }
+
+.gallery-img {
+  background: map-get($colors, sectionBackground);
+  margin: 2rem 1.5rem;
+  padding-bottom: 0.5rem;
+
+  img {
+    width: 100%;
+  }
+  h3 {
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+
+  .search-icon-container {
+    height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    margin: 1rem auto;
+    cursor: pointer;
+
+    .gallery-search-icon {
+      border: 2px solid map-get($colors, primary);
+      margin-right: 0.4rem;
+      border-radius: 10px;
+      height: 20px;
+      width: 20px;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        background-color: map-get($colors, primary);
+        width: 8px;
+        height: 1.5px;
+        transform: skewY(45deg);
+      }
+    }
+
+    &:hover {
+      background: map-get($colors, success) !important;
+      @include transition;
+
+      .gallery-search-icon {
+        border: 2px solid map-get($colors, secondary);
+        @include transition;
+        transition-duration: 0.2s;
+
+        &::after {
+          background-color: map-get($colors, secondary);
+          @include transition;
+        }
+      }
+    }
+  }
 }

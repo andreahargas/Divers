@@ -1,32 +1,24 @@
+$(function(){
+
 // CHANGE SLIDE //
-$(".destinations-slider-button-left").on("click", function(){
-    $(".destinations-items-container")
-    .removeClass("middle")
-    .removeClass("right")
-    .addClass("left")
+$(".destinations-slider-button").each(function(){
 
-    $(".destinations-slider-button-right, .destinations-slider-button-middle").removeClass("active");
-    $(this).addClass("active");
+    $(this).on("click", function(){
+
+        let activeButton = $(this);
+    
+        $(".destinations-slider-button").removeClass("active")
+        activeButton.addClass("active");     
+
+        $(".destinations-item").removeClass("active");      
+        $(".destinations-item").eq(activeButton.index()).addClass("active").removeClass("prev next");
+
+        let activeInstructor = $(".destinations-item.active");
+        let prevInstructor = activeInstructor.prevAll()
+        let nextInstructor = activeInstructor.nextAll()
+
+        prevInstructor.removeClass("next").addClass("prev")
+        nextInstructor.removeClass("prev").addClass("next")  
+    })
 })
-
-
-$(".destinations-slider-button-middle").on("click", function(){
-    $(".destinations-items-container")
-    .removeClass("left")
-    .removeClass("right")
-    .addClass("middle")
-
-    $(".destinations-slider-button-left, .destinations-slider-button-right").removeClass("active");
-    $(this).addClass("active");
-})
-
-
-$(".destinations-slider-button-right").on("click", function(){
-    $(".destinations-items-container")
-    .removeClass("left")
-    .removeClass("middle")
-    .addClass("right")
-
-    $(".destinations-slider-button-left, .destinations-slider-button-middle").removeClass("active");
-    $(this).addClass("active");
 })

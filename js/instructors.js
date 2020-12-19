@@ -1,3 +1,6 @@
+$(function(){
+
+// SLIDER //
 $(".instructors-slider-button").each(function(){
 
     $(this).on("click", function(){
@@ -17,4 +20,5 @@ $(".instructors-slider-button").each(function(){
         prevInstructor.removeClass("next").addClass("prev")
         nextInstructor.removeClass("prev").addClass("next")  
     })
+})
 })

@@ -1,36 +1,36 @@
+// SLIDER ITEMS //
 .divers-slider {
   position: relative;
   padding-top: 4.5rem;
 
-  img {
+  .divers-img {
     width: 80%;
 
-    &.show {
+    &.active {
       opacity: 100%;
       @include transition;
       transition-duration: 0.5s;
     }
+
+    &.hide {
+      opacity: 0;
+      @include transition;
+      transition-duration: 0.5s;
+    }
   }
-}
 
-.divers-img-right,
-.divers-img-middle {
-  position: absolute;
-  top: 4.5rem;
-  left: 10%;
-  opacity: 0;
-  @include transition;
-  transition-duration: 0.5s;
-}
-
-.divers-img-left {
-  &.hide {
+  .divers-img-hidden {
+    position: absolute;
+    top: 4.5rem;
+    left: 10%;
     opacity: 0;
     @include transition;
     transition-duration: 0.5s;
   }
 }
+// END OF SLIDER ITEMS //
 
+// SLIDER BUTTONS //
 .divers-slider-buttons-container {
   width: 100%;
   height: 4.7rem;
@@ -44,6 +44,7 @@
 
     &.active {
       background-color: map-get($colors, dark) !important;
+      @include transition;
     }
 
     &:hover {
@@ -52,7 +53,9 @@
     }
   }
 }
+// END OF SLIDER BUTTONS //
 
+// DIVERS TEXT, DROPDOWN MENU //
 .divers-description {
   padding: 0rem 1rem;
   margin-top: 2rem;
@@ -107,7 +110,9 @@
     }
   }
 }
+// END OF DIVERS TEXT, DROPDOWN MENU //
 
+// ICONS //
 .divers-icons {
   .divers-icons-item {
     border: 0.5px solid map-get($colors, light);
@@ -128,3 +133,4 @@
     }
   }
 }
+// END OF ICONS //

@@ -1,6 +1,5 @@
 .destinations {
-  position: relative;
-  padding-bottom: 4.7rem;
+  padding-bottom: 1rem;
 }
 
 .destinations-title {
@@ -8,28 +7,29 @@
   margin-top: 3rem;
 }
 
+// SLIDER ITEMS //
 .destinations-items-container {
-  &.right {
-    transform: translateX(-66.66666667%);
-    @include transition;
-    transition-duration: 0.2s;
-  }
-
-  &.middle {
-    transform: translateX(-33.333333334%);
-    @include transition;
-    transition-duration: 0.2s;
-  }
-
-  &.left {
-    transform: translateX(0);
-    @include transition;
-    transition-duration: 0.2s;
-  }
+  position: relative;
 
   .destinations-item {
-    width: 100vw;
-    max-width: 100% !important;
+    width: 100%;
+
+    &.active {
+      transform: translateX(0);
+      @include transition;
+      opacity: 1;
+    }
+
+    &.prev {
+      transform: translateX(-100%);
+      @include transition;
+      opacity: 0;
+    }
+    &.next {
+      transform: translateX(100%);
+      @include transition;
+      opacity: 0;
+    }
 
     img {
       width: 90%;
@@ -63,12 +63,18 @@
       }
     }
   }
-}
 
+  .destinations-item-hidden {
+    position: absolute;
+    top: 0;
+    transform: translateX(100%);
+  }
+}
+// END OF SLIDER ITEMS //
+
+// SLIDER BUTTONS //
 .destinations-slider-buttons-container {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
+  width: 100%;
   height: 4.7rem;
 
   .destinations-slider-button {
@@ -88,3 +94,4 @@
     }
   }
 }
+// END OF SLIDER BUTTONS //

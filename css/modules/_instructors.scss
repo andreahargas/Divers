@@ -8,6 +8,7 @@
   margin-bottom: 2rem;
 }
 
+// SLIDER ITEMS //
 .instructors-items-container {
   position: relative;
 
@@ -61,7 +62,9 @@
     transform: translateX(100%);
   }
 }
+// END OF SLIDER ITEMS //
 
+// SLIDER BUTTONS //
 .instructors-slider-buttons-container {
   width: 100%;
   height: 5rem;
@@ -83,3 +86,4 @@
     }
   }
 }
+// END OF SLIDER BUTTONS //

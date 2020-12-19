@@ -1,32 +1,20 @@
+$(function(){
+
 // SLIDER //
-$(".divers-slider-button-left").on("click", function(){
-    $(".divers-img-left").addClass("show").removeClass("hide");
-    $(".divers-img-right, .divers-img-middle").removeClass("show")
+$(".divers-slider-button").each(function(){
 
-    $(".divers-slider-button-right, .divers-slider-button-middle").removeClass("active");
-    $(this).addClass("active");
+    $(this).on("click", function(){
+
+        let activeButton = $(this);
+    
+        $(".divers-slider-button").removeClass("active")
+        activeButton.addClass("active");     
+
+        $(".divers-img").removeClass("active");      
+        $(".divers-img").eq(activeButton.index()).addClass("active").removeClass("hide");
+        $(".divers-img").not($(".divers-img.active")).addClass("hide");      
+    })
 })
-
-
-$(".divers-slider-button-middle").on("click", function(){
-    $(".divers-img-middle").addClass("show");
-    $(".divers-img-right, .divers-img-left").removeClass("show");
-    $(".divers-img-left").addClass("hide");
-
-    $(".divers-slider-button-left, .divers-slider-button-right").removeClass("active");
-    $(this).addClass("active");
-})
-
-
-$(".divers-slider-button-right").on("click", function(){
-    $(".divers-img-right").addClass("show");
-    $(".divers-img-left, .divers-img-middle").removeClass("show");
-    $(".divers-img-left").addClass("hide");
-
-    $(".divers-slider-button-left, .divers-slider-button-middle").removeClass("active");
-    $(this).addClass("active");
-})
-
 
 // OPEN TEXT //
 $(".divers-description-categories i").each(function(){
@@ -45,3 +33,4 @@ $(".divers-description-categories i").each(function(){
     
 })
 // END OF OPEN TEXT //
+})

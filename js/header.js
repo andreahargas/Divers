@@ -98,6 +98,8 @@ $(function(){
     let right = setInterval(moveToRight, 6000);
     let left = setInterval(moveToLeft, 12000);
 
+    console.log(typeof Interval)
+
 
     // CHANGE SLIDE MANUALLY //  
     $(".header-slider-button").each(function(){
@@ -130,6 +132,8 @@ $(function(){
                 }, 1700);
         })
     })
+
+    
 })
 
 

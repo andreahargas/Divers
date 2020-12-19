@@ -1,3 +1,6 @@
+$(function(){
+
+// SLIDER //
 $(".blog-slider-button").each(function(){
 
     $(this).on("click", function(){
@@ -17,4 +20,5 @@ $(".blog-slider-button").each(function(){
         prevBlog.removeClass("next").addClass("prev")
         nextBlog.removeClass("prev").addClass("next")  
     })
+})
 })

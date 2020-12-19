@@ -1,4 +1,6 @@
+$(function(){
 
+// SLIDER // 
 $(".testimonials-slider-button-next").on("click", function(){
 
     let currentSlide = $(".testimonials-item.active");
@@ -20,7 +22,6 @@ $(".testimonials-slider-button-next").on("click", function(){
         $(".testimonials-slider-button-prev").css("cursor", "pointer");
         $(".testimonials-slider-button-prev").addClass("hover");
     }
-
 })
 
 $(".testimonials-slider-button-prev").on("click", function(){
@@ -43,6 +44,6 @@ $(".testimonials-slider-button-prev").on("click", function(){
     if(!$(".testimonials-item:last-child").hasClass("active")){
         $(".testimonials-slider-button-next").css("cursor", "pointer");
         $(".testimonials-slider-button-next").addClass("hover");
-    }   
-
+    } 
+})
 })
