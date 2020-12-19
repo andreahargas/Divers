@@ -58,13 +58,14 @@
         .instructors-item-hidden{
             position: absolute;
             top: 0;
+            width: 100%;
             transform: translateX(100%);
         }
     }
 
     .instructors-slider-buttons-container {
         width: 100%;
-        height: 4.7rem;
+        height: 5rem;
     
         .instructors-slider-button {
             width: 15px;

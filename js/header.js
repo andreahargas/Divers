@@ -49,49 +49,42 @@ $(function(){
     });
 
 
-    // CHANGE SLIDE //
-    $(".header-slider-button-right").on("click", function(){
+    // CHANGE SLIDE //  
+    $(".header-slider-button").each(function(){
 
-        $(".header-slider")
-        .removeClass("left")
-        .addClass("right");
-        $(".header-slider-button-left").removeClass("active");
-        $(this).addClass("active");
-        $(".header-title, .header-description, .read-more-btn").addClass("animation")
+        $(this).on("click", function(){
+    
+            let activeButton = $(this);
+        
+            $(".header-slider-button").removeClass("active")
+            activeButton.addClass("active");     
+    
+            $(".sides").removeClass("active");      
+            $(".sides").eq(activeButton.index()).addClass("active").removeClass("prev next");
+    
+            let activeSide = $(".sides.active");
+            let prevSide = activeSide.prev()
+            let nextSide = activeSide.next()
+    
+            prevSide.removeClass("next").addClass("prev")
+            nextSide.removeClass("prev").addClass("next")  
 
-        setTimeout(function() {
-            $(".header-title").removeClass("animation");
-          }, 1500);
-        setTimeout(function() {
-            $(".header-description").removeClass("animation");
-            }, 1600);
-            
-        setTimeout(function() {
-            $(".read-more-btn").removeClass("animation");
-            }, 1700);
-    });
+            // ADD TEXT ANIMATION //
+            $(".header-title, .header-description, .read-more-btn").addClass("animation")
 
-    $(".header-slider-button-left").on("click", function(){
-        $(".header-slider")
-        .removeClass("right")
-        .addClass("left");
-        $(".header-slider-button-right").removeClass("active");
-        $(this).addClass("active");
-        $(".header-title, .header-description, .read-more-btn").removeClass("animation").addClass("animation")
-
-        setTimeout(function() {
-            $(".header-title").removeClass("animation");
-          }, 1500);
-        setTimeout(function() {
-            $(".header-description").removeClass("animation");
-            }, 1600);
-            
-        setTimeout(function() {
-            $(".read-more-btn").removeClass("animation");
-            }, 1700);
-    })   
-
-});
+            setTimeout(function() {
+                $(".header-title").removeClass("animation");
+              }, 1500);
+            setTimeout(function() {
+                $(".header-description").removeClass("animation");
+                }, 1600);
+                
+            setTimeout(function() {
+                $(".read-more-btn").removeClass("animation");
+                }, 1700);
+        })
+    })
+})
 
 
 

@@ -1,3 +1,17 @@
+header{
+  margin-top: 3.8rem;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  height: 3.8rem;
+  width: 100%;
+  background: map-get($colors, primary);
+  z-index: 10;
+  @include box-shadow;
+}
+
 //NAV BUTTONS, ICONS STYLE//
 .menu-btn {
   display: flex;
@@ -328,23 +342,29 @@
 
 // SLIDER //
 .header-slider {
-  z-index: 0;
-  &.right {
-    transform: translateX(-50%);
-    @include transition;
-    transition-duration: 0.4s;
-  }
-
-  &.left {
-    transform: translateX(0);
-    @include transition;
-    transition-duration: 0.4s;
-  }
+  position: relative;
+  
   .sides {
     text-align: center;
     height: 75vh;
-    width: 100vw;
+    width: 100%;
     max-width: 100%;
+
+    &.active{
+      transform: translateX(0);
+      @include transition;
+      transition-duration: 0.4s;
+    }
+    &.prev {
+      transform: translateX(-100%);
+      @include transition;
+      transition-duration: 0.4s;
+    }
+    &.next {
+      transform: translateX(100%);
+      @include transition;
+      transition-duration: 0.4s;
+    }
 
     .header-title {
       font-size: 2rem;
@@ -382,7 +402,7 @@
     }
 
     .read-more-btn {
-      margin-top: 2.5rem;
+      margin-top: 1rem;
       border: none;
       padding: 0.5rem 1.5rem;
       border-radius: 8px;
@@ -401,26 +421,27 @@
       }
     }
 
-    &.left-side {
-      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url(../../img/header-img.jpg) center/cover;
-    }
+  }
+  .header-slider-left {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url(../../img/header-img.jpg) center/cover;
+  }
 
-    &.right-side {
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(../../img/header-img2.jpg) center/cover;
-    }
+  .header-slider-right {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../../img/header-img2.jpg) center/cover;
+      position: absolute;
+      top: 0;
+      transform: translateX(100%);
   }
 }
 
-.header-slider-buttons-container {
-  z-index: 0;
-  position: absolute;
-  bottom: 14vh;
-  width: 100vw;
-  height: 4.7rem;
+.header-slider-buttons-container {  
+  width: 100%;
+  margin-top: -2rem;
 
   .header-slider-button {
+    z-index: 1;
     width: 15px;
     height: 15px;
     border-radius: 15px;
