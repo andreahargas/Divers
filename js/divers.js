@@ -26,7 +26,7 @@ $(".divers-slider-button-right").on("click", function(){
     $(".divers-slider-button-left, .divers-slider-button-middle").removeClass("active");
     $(this).addClass("active");
 })
-// END OF SLIDER //
+
 
 // OPEN TEXT //
 $(".divers-description-categories i").each(function(){

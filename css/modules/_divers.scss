@@ -1,125 +1,130 @@
-.divers-slider{
-    position: relative;
-    padding-top: 4.5rem;
+.divers-slider {
+  position: relative;
+  padding-top: 4.5rem;
 
-    img{
-        width: 80%;
+  img {
+    width: 80%;
 
-        &.show{
-            opacity: 100%;
-            @include transition;
-            transition-duration: 0.5s;
-        }
+    &.show {
+      opacity: 100%;
+      @include transition;
+      transition-duration: 0.5s;
     }
-
-    .divers-img-right, .divers-img-middle{
-        position: absolute;
-        top: 4.5rem;
-        left: 10%;
-        opacity: 0;
-        @include transition;
-        transition-duration: 0.5s;
-    }   
-    
-    .divers-img-left{
-
-        &.hide{
-            opacity: 0;
-            @include transition;
-            transition-duration: 0.5s;
-        }
-    }
-
-.divers-slider-buttons-container {
-    width: 100%;
-    height: 4.7rem;
-
-    .divers-slider-button {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        margin: 0.5rem;
-        cursor: pointer;
-    
-        &.active {
-          background-color: map-get($colors, dark) !important;
-        }
-      }
   }
 }
 
-.divers-description{
-    padding: 0rem 1rem;
-    margin-top: 2rem;
-
-    .divers-description-title{
-        font-size: 1.375rem;
-    }
-
-    .divers-description-categories{
-        margin-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid map-get($colors, light );
-
-        i{
-            margin-right: 1rem;
-            color: map-get($colors, dark);
-            font-size: 0.75rem;
-            padding: 0.5rem;
-            border-radius: 20px;
-            box-shadow: 0px 0px 5px map-get($colors, light );
-            transform: rotate(-90deg);
-            @include transition;
-            cursor: pointer;
-
-            &.open{
-                background: map-get($colors, dark);
-                color: map-get($colors, primary);
-                transform: rotate(0);
-                @include transition;
-            }
-        }
-    
-        h3{
-            font-size: 0.875rem;
-            margin: 0;
-            font-family: 'Poppins Medium' , sans-serif;
-        }
-    }
-
-    p{
-        font-size: 0.8125rem;
-        margin-top: 0.8rem;
-        margin-bottom: 2rem;
-        line-height: 1.2rem;
-        display: none;
-
-        &.open{
-            display: block;
-            @include transition;
-            transition-duration: 5s;
-        }
-    }
+.divers-img-right,
+.divers-img-middle {
+  position: absolute;
+  top: 4.5rem;
+  left: 10%;
+  opacity: 0;
+  @include transition;
+  transition-duration: 0.5s;
 }
 
-.divers-icons{
+.divers-img-left {
+  &.hide {
+    opacity: 0;
+    @include transition;
+    transition-duration: 0.5s;
+  }
+}
 
-    .divers-icons-item{
-        border: 0.5px solid map-get($colors, light);
-        padding: 1rem;
-        margin: 2rem 1rem;
+.divers-slider-buttons-container {
+  width: 100%;
+  height: 4.7rem;
 
-        img{
-            margin-bottom: 0.5rem;
-        }
-        
-        .divers-icons-title{
-            font-size: 1rem;
-        }
-    
-        .divers-icons-description{
-            font-size: 0.8125rem;
-            margin: 0;
-        }        
+  .divers-slider-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin: 0.5rem;
+    cursor: pointer;
+
+    &.active {
+      background-color: map-get($colors, dark) !important;
     }
+
+    &:hover {
+      background-color: map-get($colors, dark) !important;
+      @include transition;
+    }
+  }
+}
+
+.divers-description {
+  padding: 0rem 1rem;
+  margin-top: 2rem;
+
+  .divers-description-title {
+    font-size: 1.375rem;
+    margin-bottom: 2rem;
+  }
+
+  .divers-description-categories {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid map-get($colors, light);
+
+    i {
+      margin-right: 1rem;
+      color: map-get($colors, dark);
+      font-size: 0.75rem;
+      padding: 0.5rem;
+      border-radius: 20px;
+      box-shadow: 0px 0px 5px map-get($colors, light);
+      transform: rotate(-90deg);
+      @include transition;
+      cursor: pointer;
+
+      &.open {
+        background: map-get($colors, dark);
+        color: map-get($colors, primary);
+        transform: rotate(0);
+        @include transition;
+      }
+    }
+
+    h3 {
+      font-size: 0.875rem;
+      margin: 0;
+      font-family: "Poppins Medium", sans-serif;
+    }
+  }
+
+  p {
+    font-size: 0.8125rem;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+    line-height: 1.2rem;
+    display: none;
+
+    &.open {
+      display: block;
+      @include transition;
+      transition-duration: 5s;
+    }
+  }
+}
+
+.divers-icons {
+  .divers-icons-item {
+    border: 0.5px solid map-get($colors, light);
+    padding: 1rem;
+    margin: 2rem 1rem;
+
+    img {
+      margin-bottom: 0.5rem;
+    }
+
+    .divers-icons-title {
+      font-size: 1rem;
+    }
+
+    .divers-icons-description {
+      font-size: 0.8125rem;
+      margin: 0;
+    }
+  }
 }

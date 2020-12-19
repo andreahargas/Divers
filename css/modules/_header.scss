@@ -413,6 +413,7 @@ header{
      &:hover{
        background-color: map-get($colors, dark) !important;
        color: map-get($colors, primary) !important;
+       @include transition;
      }
 
       &.animation {
@@ -447,6 +448,11 @@ header{
     border-radius: 15px;
     margin: 0.3rem;
     cursor: pointer;
+
+    &:hover{
+      background-color: map-get($colors, success) !important;
+      @include transition;
+    }
 
     &.active {
       background-color: map-get($colors, success) !important;

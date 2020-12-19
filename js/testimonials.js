@@ -13,10 +13,12 @@ $(".testimonials-slider-button-next").on("click", function(){
 
     if($(".testimonials-item:last-child").hasClass("active")){
         $(".testimonials-slider-button-next").css("cursor", "default");
+        $(".testimonials-slider-button-next").removeClass("hover");
     }
 
     if(!$(".testimonials-item:first-child").hasClass("active")){
-        $(".testimonials-slider-button-prev").css("cursor", "pointer")
+        $(".testimonials-slider-button-prev").css("cursor", "pointer");
+        $(".testimonials-slider-button-prev").addClass("hover");
     }
 
 })
@@ -32,13 +34,15 @@ $(".testimonials-slider-button-prev").on("click", function(){
     if(prevSlide.length == 0){
         currentSlide.addClass("active").removeClass("next")
     };
-
-    if(!$(".testimonials-item:last-child").hasClass("active")){
-        $(".testimonials-slider-button-next").css("cursor", "pointer")
-    }
     
     if($(".testimonials-item:first-child").hasClass("active")){
         $(".testimonials-slider-button-prev").css("cursor", "default")
+        $(".testimonials-slider-button-prev").removeClass("hover");
     }  
+
+    if(!$(".testimonials-item:last-child").hasClass("active")){
+        $(".testimonials-slider-button-next").css("cursor", "pointer");
+        $(".testimonials-slider-button-next").addClass("hover");
+    }   
 
 })
