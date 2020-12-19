@@ -1,0 +1,116 @@
+footer {
+  background: #2a333f;
+}
+
+.footer-items-container {
+  padding: 1rem;
+  h2 {
+    font-size: 1rem;
+  }
+
+  h4,
+  li {
+    font-size: 0.8125rem;
+  }
+
+  .footer-item-gallery {
+    .gallery-title {
+      padding: 1rem 0;
+    }
+
+    .img-container {
+      width: 100%;
+      margin: auto;
+
+      .img-item {
+        padding: 0.5rem;
+        object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .footer-item-links {
+    .links-title {
+      padding: 1rem 0;
+      padding-top: 2rem;
+    }
+
+    .list-container {
+      padding: 0 2rem;
+      ul {
+        padding: 0;
+
+        a {
+          &:hover {
+            text-decoration: none;
+            color: map-get($colors, dark) !important;
+            @include transition;
+          }
+
+          li {
+            list-style-type: none;
+            line-height: 1.5rem;
+            margin-left: 2rem;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0.75rem;
+              left: -1.2rem;
+              width: 0.6rem;
+              height: 1px;
+              background-color: map-get($colors, info);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-item-contact {
+    line-height: 2.5rem;
+    .contact-title {
+      padding: 1rem 0;
+      padding-top: 2rem;
+    }
+
+    h4 {
+      line-height: 1.5rem;
+      padding: 0 3rem;
+    }
+
+    .social-icons {
+      a {
+        display: inline-block;
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 1px solid map-get($colors, light);
+        border-radius: 100%;
+        margin: 1rem 0.2rem;
+        margin-bottom: 2rem;
+
+        &:hover {
+          border: 1px solid map-get($colors, dark);
+          @include transition;
+
+          i {
+            color: map-get($colors, dark) !important;
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+
+
+.copyright {
+  border-top: 1px solid map-get($colors, light);
+  padding: 1.5rem;
+  font-size: 0.8125rem;
+
+  p {
+    margin: 0;
+  }
+}
