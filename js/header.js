@@ -1,5 +1,7 @@
 $(function(){
 
+    console.log($(".destinations-item-hidden:first"));
+
     // OPEN SIDE MENU //
     $(".menu-btn").on("click", function(){
         $(".menu-icon, .navbar-nav").toggleClass("open");
@@ -97,8 +99,6 @@ $(function(){
 
     let right = setInterval(moveToRight, 6000);
     let left = setInterval(moveToLeft, 12000);
-
-    console.log(typeof Interval)
 
 
     // CHANGE SLIDE MANUALLY //  

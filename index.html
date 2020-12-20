@@ -18,16 +18,16 @@
 <body>
 
     <header>
-        <nav class="navbar">
+        <nav class="navbar bg-primary">
 
             <!--  MENU -->
-            <div class="menu-container">
+            <div class="menu-container order-md-2 flex-md-column bg-success">
                 <div class="menu-btn">
                     <div class="menu-icon bg-secondary"></div>
                 </div>
 
                 <!-- SIDE MENU -->
-                <ul class="navbar-nav bg-primary">
+                <ul class="navbar-nav bg-primary d-flex flex-md-row bg-dark">
                     <li class="nav-item"><a href="#" class="nav-link text-primary bg-dark font-weight-bold home">HOME</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">PAGES<i class="fas fa-chevron-down"></i></a>
                         
@@ -125,12 +125,12 @@
 
     <!-- HEADER SLIDER -->
     <div class="header-slider bg-success">
-        <div class="header-slider-left sides d-flex flex-column align-items-center justify-content-center active">
+        <div class="header-slider-left sides d-flex flex-column align-items-center align-items-sm-start justify-content-center active">
             <h1 class="header-title text-capitalize text-primary">enjoy scuba diving with us</h1>
             <h2 class="header-description">We offer a wide variety of scuba diving tours and locations for everyone.</h2>
             <button class="read-more-btn bg-success text-secondary font-weight-bold">READ MORE</button>
         </div>
-        <div class="header-slider-right sides d-flex flex-column align-items-center justify-content-center">
+        <div class="header-slider-right sides d-flex flex-column align-items-center align-items-sm-start  justify-content-center">
             <h1 class="header-title text-capitalize text-primary">best equipment and instructors</h1>
             <h2 class="header-description">Our team and the top-notch equipment guarantee unforgettable diving.</h2>
             <button class="read-more-btn bg-success text-seco font-weight-bold">READ MORE</button>
@@ -146,7 +146,7 @@
     <!-- DESTINATIONS -->
     <section class="destinations text-center">
         <h2 class="destinations-title">Destinations</h2>
-        <div class="destinations-items-container">
+        <div class="destinations-items-container d-flex">
             <div class="destinations-item text-center active">
                 <img src="img/destination-img.jpg" alt="maldives">
                 <h3 class="destinations-item-title">Maldives</h3>
@@ -175,36 +175,38 @@
     <!-- END OF DESTINATIONS -->
 
     <!-- QUALITIES -->
-    <section class="qualities text-center">
-        <div class="qualities-column">        
-            <div class="qualities-item">
-                <img src="img/qualities.png" alt="icon" class="mt-0">
-                <div class="qualities-text">
-                    <a href="#" class="qualities-title text-secondary">Best Equipment</a>
-                    <h3 class="qualities-description text-danger">Our agency provides first-class equipment for all our clients, regardless of their level</h3>
+    <section class="qualities">
+        <div class="qualities-items-container text-center d-flex flex-column flex-sm-row justify-content-around justify-content-lg-between">
+            <div class="qualities-column">        
+                <div class="qualities-item d-flex flex-column align-items-center flex-md-row">
+                    <img src="img/qualities.png" alt="icon" class="mt-0 order-md-2">
+                    <div class="qualities-text text-md-right">
+                        <a href="#" class="qualities-title text-secondary">Best Equipment</a>
+                        <h3 class="qualities-description text-danger">Our agency provides first-class equipment for all our clients, regardless of their level</h3>
+                    </div>
+                </div>
+                <div class="qualities-item d-flex flex-column align-items-center flex-md-row">
+                    <img src="img/qualities2.png" alt="icon" class="order-md-2">
+                    <div class="qualities-text text-md-right">
+                        <a href="#" class="qualities-title text-secondary">Exciting Places</a>
+                        <h3 class="qualities-description text-danger">We offer a variety of destinations including the most exotic ones located all over the world.</h3>
+                    </div>
                 </div>
             </div>
-            <div class="qualities-item">
-                <img src="img/qualities2.png" alt="icon">
-                <div class="qualities-text">
-                    <a href="#" class="qualities-title text-secondary">Exciting Places</a>
-                    <h3 class="qualities-description text-danger">We offer a variety of destinations including the most exotic ones located all over the world.</h3>
+            <div class="qualities-column">    
+                <div class="qualities-item d-flex flex-column align-items-center flex-md-row">
+                    <img src="img/qualities3.png" alt="icon" class="second">
+                    <div class="qualities-text text-md-left">
+                        <a href="#" class="qualities-title text-secondary">100% Safety</a>
+                        <h3 class="qualities-description text-danger">We pay a lot of attention to divers’ safety at all times, as there’s always some risk involved in it.</h3>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="qualities-column">    
-            <div class="qualities-item">
-                <img src="img/qualities3.png" alt="icon">
-                <div class="qualities-text">
-                    <a href="#" class="qualities-title text-secondary">100% Safety</a>
-                    <h3 class="qualities-description text-danger">We pay a lot of attention to divers’ safety at all times, as there’s always some risk involved in it.</h3>
-                </div>
-            </div>
-            <div class="qualities-item">
-                <img src="img/qualities4.png" alt="icon">
-                <div class="qualities-text">
-                    <a href="#" class="qualities-title text-secondary">Instructors</a>
-                    <h3 class="qualities-description text-danger">We are a team of talented and experienced diving instructors always ready to help you.</h3>
+                <div class="qualities-item d-flex flex-column align-items-center flex-md-row">
+                    <img src="img/qualities4.png" alt="icon">
+                    <div class="qualities-text text-md-left">
+                        <a href="#" class="qualities-title text-secondary">Instructors</a>
+                        <h3 class="qualities-description text-danger">We are a team of talented and experienced diving instructors always ready to help you.</h3>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,15 +1,28 @@
-header{
+header {
+  position: relative;
   margin-top: 3.8rem;
+  height: 75vh;
+  z-index: 0;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 0;
+    height: 90vh;
+  }
 }
 
-.navbar{
+.navbar {
   position: fixed;
   top: 0;
   height: 3.8rem;
   width: 100%;
-  background: map-get($colors, primary);
   z-index: 10;
   @include box-shadow;
+
+  @include media-breakpoint-up(md) {
+    position: static;
+    background: none !important;
+    box-shadow: none;
+  }
 }
 
 //NAV BUTTONS, ICONS STYLE//
@@ -24,6 +37,10 @@ header{
     width: 25px;
     height: 2px;
     position: relative;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
 
     &::before {
       content: "";
@@ -180,6 +197,16 @@ header{
   transform: translateX(-110%);
   @include transition;
 
+  @include media-breakpoint-up(md) {
+    // background: transparent !important;
+    transform: translateX(0);
+    box-shadow: none;
+    position: static;
+    height: 3.8rem;
+    width: 100%;
+    background: pink;
+  }
+
   &.open {
     transform: translateX(0);
     @include transition;
@@ -213,6 +240,10 @@ header{
         cursor: pointer;
         transform: rotateZ(0deg);
         @include transition;
+
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
 
         &.open {
           transform: rotateZ(180deg);
@@ -342,15 +373,24 @@ header{
 
 // SLIDER //
 .header-slider {
-  position: relative;
-  
   .sides {
+    position: absolute;
+    top: 0;
     text-align: center;
+    z-index: -1;
     height: 75vh;
     width: 100%;
-    max-width: 100%;
+    padding: 0 10%;
 
-    &.active{
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+    }
+
+    @include media-breakpoint-up(md) {
+      height: 90vh;
+    }
+
+    &.active {
       transform: translateX(0);
       @include transition;
       transition-duration: 0.4s;
@@ -368,9 +408,16 @@ header{
 
     .header-title {
       font-size: 2rem;
-      padding: 0 1em;
       line-height: 1.5em;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
+
+      @include media-breakpoint-up(sm) {
+        width: 18rem;
+      }
+      @include media-breakpoint-up(md) {
+        font-size: 3.125rem;
+        width: 28rem;
+      }
 
       &.animation {
         @keyframes test {
@@ -391,9 +438,17 @@ header{
 
     h2 {
       font-size: 0.875rem;
-      padding: 0 2em;
       line-height: 1.5em;
       color: #bebebeda;
+
+      @include media-breakpoint-up(sm) {
+        width: 19rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        font-size: 1.125rem;
+        width: 25rem;
+      }
 
       &.animation {
         @extend .header-title.animation;
@@ -410,18 +465,17 @@ header{
       font-size: 0.8rem;
       position: relative;
 
-     &:hover{
-       background-color: map-get($colors, dark) !important;
-       color: map-get($colors, primary) !important;
-       @include transition;
-     }
+      &:hover {
+        background-color: map-get($colors, dark) !important;
+        color: map-get($colors, primary) !important;
+        @include transition;
+      }
 
       &.animation {
         @extend .header-title.animation;
         animation-delay: 0.9s;
       }
     }
-
   }
   .header-slider-left {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -431,26 +485,29 @@ header{
   .header-slider-right {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url(../../img/header-img2.jpg) center/cover;
-      position: absolute;
-      top: 0;
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
-  // SLIDER BUTTONS //
-.header-slider-buttons-container {  
+// SLIDER BUTTONS //
+.header-slider-buttons-container {
   width: 100%;
-  margin-top: -2rem;
+  position: absolute;
+  top: 55vh;
+  margin-top: 5rem;
+
+  @include media-breakpoint-up(md) {
+    top: 70vh;
+  }
 
   .header-slider-button {
-    z-index: 1;
     width: 15px;
     height: 15px;
     border-radius: 15px;
     margin: 0.3rem;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       background-color: map-get($colors, success) !important;
       @include transition;
     }

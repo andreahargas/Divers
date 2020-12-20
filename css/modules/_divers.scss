@@ -5,6 +5,7 @@
 
   .divers-img {
     width: 80%;
+    z-index: -1;
 
     &.active {
       opacity: 100%;
