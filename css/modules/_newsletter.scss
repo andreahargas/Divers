@@ -1,48 +1,115 @@
 .newsletter {
   padding: 0 1rem;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../../img/newsletter-img.jpg) center/cover;
+    url(../../img/newsletter-img.jpg) center/cover fixed;
 
-  .newsletter-title {
-    font-size: 1.375rem;
-    padding-top: 3rem;
+  @include media-breakpoint-up(md) {
+    height: 18rem;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 21rem;
   }
 
-  h3 {
-    font-size: 0.8125rem;
-    margin-top: 1rem;
-  }
-
-  input {
-    display: block;
-    background: none;
-    border: none;
+  .newsletter-items-container {
+    max-width: 1230px;
     margin: auto;
-    border-bottom: 1px solid map-get($colors, primary);
-    width: 100%;
-    margin-top: 2.6rem;
-    padding-bottom: 0.5rem;
-    color: map-get($colors, primary);
+    height: 100%;
+  }
 
-    &::placeholder {
-      color: map-get($colors, primary);
+  .newsletter-text {
+    @include media-breakpoint-up(xl) {
+      text-align: left;
+    }
+
+    .newsletter-title {
+      font-size: 1.375rem;
+      padding-top: 3rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.625rem;
+        padding-top: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 2.75rem;
+      }
+    }
+
+    h3 {
+      font-size: 0.8125rem;
+      margin-top: 1rem;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 3rem;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 0.94rem;
+      }
+      @include media-breakpoint-up(xl) {
+        margin: 0;
+      }
     }
   }
 
-  button {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    border: none;
-    letter-spacing: 0.1rem;
-    font-size: 0.875rem;
-    width: 100%;
-    padding: 0.6rem;
-    border-radius: 4px;
+  .input-container {
+    @include media-breakpoint-up(md) {
+      padding: 0 2rem;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-right: 0;
+    }
 
-    &:hover {
-      color: map-get($colors, primary) !important;
-      background-color: map-get($colors, dark) !important;
-      @include transition;
+    input {
+      display: block;
+      background: none;
+      border: none;
+      margin: auto;
+      border-bottom: 1px solid map-get($colors, primary);
+      width: 100%;
+      margin-top: 2.6rem;
+      padding-bottom: 0.5rem;
+      color: map-get($colors, primary);
+
+      &::placeholder {
+        color: map-get($colors, primary);
+      }
+
+      @include media-breakpoint-up(md) {
+        margin: 2rem 0;
+        margin-right: 2rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: 40rem;
+        margin-top: 0;
+      }
+    }
+
+    button {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      border: none;
+      letter-spacing: 0.1rem;
+      font-size: 0.875rem;
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 4px;
+
+      &:hover {
+        color: map-get($colors, primary) !important;
+        background-color: map-get($colors, dark) !important;
+        @include transition;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin: 2rem 0;
+        width: 40%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 12rem;
+        height: 4rem;
+      }
+
+      
     }
   }
 }
