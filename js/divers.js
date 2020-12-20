@@ -17,17 +17,17 @@ $(".divers-slider-button").each(function(){
 })
 
 // OPEN TEXT //
-$(".divers-description-categories i").each(function(){
+$(".divers-menu-categories i").each(function(){
     $(this).on("click", function(){
-        $(".divers-description-categories i, .divers-description-item p").not(this).not($(this).parent().siblings("p")).removeClass("open"); 
+        $(".divers-menu-categories i, .divers-menu-item p").not(this).not($(this).parent().siblings("p")).removeClass("open"); 
 
         $(this).toggleClass("open");
         $(this).parent().siblings("p").toggleClass("open"); 
 
-        if($(".divers-description-categories i:last").hasClass("open")){
-            $(".divers-description-categories:last").removeClass("border-0")
+        if($(".divers-menu-categories i:last").hasClass("open")){
+            $(".divers-menu-categories:last").removeClass("border-0")
         } else{
-            $(".divers-description-categories:last").addClass("border-0")
+            $(".divers-menu-categories:last").addClass("border-0")
         }
     })
     

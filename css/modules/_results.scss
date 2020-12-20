@@ -1,20 +1,58 @@
-.results{
-    padding: 3rem 1rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/results-bg.jpg) center/cover fixed;
+.results {
+  padding: 3rem 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/results-bg.jpg) center/cover fixed;
 
-    .results-item{
-        margin-top: 1.5rem;
-
-        .results-number{
-            display: inline-block;
-            font-size: 1.625rem;
-            border-bottom: 1px solid map-get($colors, primary );
-            padding-bottom: 0.5rem;
-        }
-    
-        .results-title{
-            font-size: 0.875rem;
-            line-height: 1.3rem;
-        }
+    @include media-breakpoint-up(lg){
+        height: 18rem;
     }
+    @include media-breakpoint-up(xl){
+        height: 24rem;
+    }
+
+  .results-items-container {
+    margin: auto;
+    max-width: 1230px;
+
+    @include media-breakpoint-up(lg){
+        height: 12rem;
+    }
+    @include media-breakpoint-up(xl){
+        height: 18rem;
+    }
+
+    .results-item-second-column {
+      @include media-breakpoint-down(md) {
+        margin-top: 0;
+      }
+    }
+
+    .results-item {
+      margin-top: 1.5rem;
+
+      .results-number {
+        display: inline-block;
+        font-size: 1.625rem;
+        border-bottom: 1px solid map-get($colors, primary);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 2.2rem;
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: 3.625rem;
+        }
+      }
+
+      .results-title {
+        font-size: 0.875rem;
+        line-height: 1.3rem;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
 }

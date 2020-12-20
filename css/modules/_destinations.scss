@@ -1,10 +1,8 @@
 .destinations {
   padding-bottom: 1rem;
-  margin: auto;
+  margin: auto; 
+  max-width: 1230px;
 
-  @include media-breakpoint-up(md){
-    max-width: 1230px;
-  }
 }
 
 .destinations-title {

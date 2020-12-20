@@ -46,4 +46,28 @@ $(".testimonials-slider-button-prev").on("click", function(){
         $(".testimonials-slider-button-next").addClass("hover");
     } 
 })
+
+// BIGGER SCREEN SLIDER //
+$(".testimonials-reviews-portrait").each(function(){
+
+    $(this).on("click", function(){
+
+        let activePortrait = $(this);
+    
+        $(".testimonials-reviews-portrait").removeClass("active")
+        activePortrait.addClass("active");     
+
+        $(".testimonials-item").removeClass("active");      
+        $(".testimonials-item").eq(activePortrait.index()).addClass("active").removeClass("prev next");
+
+        let currentSlide = $(".testimonials-item.active");
+        let prevSlide = currentSlide.prevAll()
+        let nextSlide = currentSlide.nextAll()
+
+        prevSlide.removeClass("next").addClass("prev")
+        nextSlide.removeClass("prev").addClass("next")  
+    })
+})
+
+
 })
