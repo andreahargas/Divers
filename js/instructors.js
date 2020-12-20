@@ -21,4 +21,11 @@ $(".instructors-slider-button").each(function(){
         nextInstructor.removeClass("prev").addClass("next")  
     })
 })
+
+// SHOW EACH ITEM ON BIGGER SCREEN //
+$(window).on("resize", function() {
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        $(".instructors-item").removeClass("active prev next"); 
+    } 
+})
 })
