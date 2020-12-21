@@ -1,7 +1,7 @@
 $(function(){
 
     // OPEN SIDE MENU //
-    $(".menu-btn").on("click", function(e){
+    $(".menu-btn").on("click", function(){
         $(".menu-icon, .navbar-nav").toggleClass("open");
         $(".search-menu, .search-icon.active, .language-menu, .contact-icon, .contact-menu").removeClass("open");
     });
