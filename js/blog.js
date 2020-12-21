@@ -21,4 +21,12 @@ $(".blog-slider-button").each(function(){
         nextBlog.removeClass("prev").addClass("next")  
     })
 })
+
+// SHOW EACH ITEM ON BIGGER SCREEN //
+$(window).on("resize", function() {
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        $(".blog-item").removeClass("active prev next"); 
+    } 
+})
+
 })

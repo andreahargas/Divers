@@ -4,12 +4,13 @@
   .qualities-items-container {
     padding: 3rem 1rem;
     margin: auto;
-    
+
     @include media-breakpoint-up(md) {
       max-width: 1230px;
     }
     @include media-breakpoint-up(lg) {
-      background: url(../../img/qualities-background.png) center/contain no-repeat;
+      background: url(../../img/qualities-background.png) center/contain
+        no-repeat;
     }
   }
 
@@ -41,6 +42,12 @@
       font-size: 1.125rem;
 
       @include media-breakpoint-up(md) {
+        font-size: 1.25rem;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 1.375rem;
+      }
+      @include media-breakpoint-up(xl) {
         font-size: 1.625rem;
       }
 
@@ -52,7 +59,7 @@
     }
 
     .qualities-description {
-      font-size: 0.8rem;
+      font-size: 0.8125rem;
       margin-top: 0.5rem;
       line-height: 1.5rem;
 

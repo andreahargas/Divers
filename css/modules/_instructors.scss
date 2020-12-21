@@ -26,6 +26,14 @@
   }
 
   .instructors-item {
+    @include media-breakpoint-up(md) {
+      &:hover {
+        img {
+          transform: scale(1.05, 1.05);
+          @include transition;
+        }
+      }
+    }
     a {
       color: map-get($colors, secondary);
 
@@ -60,6 +68,8 @@
 
     img {
       @include media-breakpoint-up(md) {
+        transform: scale(1, 1);
+        @include transition;
         width: 80%;
       }
       @include media-breakpoint-up(lg) {

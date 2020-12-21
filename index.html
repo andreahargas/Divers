@@ -18,18 +18,18 @@
 <body>
 
     <header>
-        <nav class="navbar bg-primary">
+        <nav class="navbar bg-primary d-flex justify-content-md-end">
 
             <!--  MENU -->
-            <div class="menu-container order-md-2 flex-md-column bg-success">
+            <div class="menu-container order-md-5 flex-md-column">
                 <div class="menu-btn">
                     <div class="menu-icon bg-secondary"></div>
                 </div>
 
                 <!-- SIDE MENU -->
-                <ul class="navbar-nav bg-primary d-flex flex-md-row bg-dark">
-                    <li class="nav-item"><a href="#" class="nav-link text-primary bg-dark font-weight-bold home">HOME</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">PAGES<i class="fas fa-chevron-down"></i></a>
+                <ul class="navbar-nav bg-primary d-flex flex-md-row justify-content-md-center">
+                    <li class="nav-item d-flex align-items-md-center flex-column flex-md-row"><a href="#" class="nav-link text-primary bg-dark font-weight-bold home">HOME</a></li>
+                    <li class="nav-item d-flex align-items-md-center flex-column flex-md-row"><a href="#" class="nav-link text-secondary font-weight-bold">PAGES<i class="fas fa-chevron-down"></i></a>
                         
                         <ul class="nested-links pages-links">
                             <li class="list-unstyled"><a href="#" class="text-secondary">ABOUT US</a></li>
@@ -39,7 +39,7 @@
                             <li class="list-unstyled"><a href="#" class="text-secondary">PRICING LIST</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">BLOG<i class="fas fa-chevron-down"></i></a>
+                    <li class="nav-item d-flex align-items-md-center flex-column flex-md-row"><a href="#" class="nav-link text-secondary font-weight-bold">BLOG<i class="fas fa-chevron-down"></i></a>
                         
                         <ul class="nested-links blog-links">
                             <li class="list-unstyled"><a href="#" class="text-secondary">GRID BLOG</a></li>
@@ -47,7 +47,7 @@
                             <li class="list-unstyled"><a href="#" class="text-secondary">BLOG POST</a></li>
                          </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">GALLERY<i class="fas fa-chevron-down"></i></a>
+                    <li class="nav-item d-flex align-items-md-center flex-column flex-md-row"><a href="#" class="nav-link text-secondary font-weight-bold">GALLERY<i class="fas fa-chevron-down"></i></a>
                         
                         <ul class="nested-links gallery-links">
                             <li class="list-unstyled"><a href="#" class="text-secondary">GRID GALLERY</a></li>
@@ -56,7 +56,7 @@
                             <li class="list-unstyled"><a href="#" class="text-secondary">MASONRY FULLWIDTH GALLERY</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">ELEMENTS<i class="fas fa-chevron-down"></i></a>
+                    <li class="nav-item d-flex align-items-md-center flex-column flex-md-row"><a href="#" class="nav-link text-secondary font-weight-bold">ELEMENTS<i class="fas fa-chevron-down"></i></a>
                         
                         <ul class="nested-links elements-links">
                             <li class="list-unstyled"><a href="#" class="text-secondary">TYPOGRAPHY</a></li>
@@ -67,22 +67,27 @@
                             <li class="list-unstyled"><a href="#" class="text-secondary">FORMS</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link text-secondary font-weight-bold">CONTACTS</a></li>
+                    <li class="nav-item d-flex align-items-md-center flex-column flex-md-row"><a href="#" class="nav-link text-secondary font-weight-bold">CONTACTS</a></li>
                 </ul>
                 <!-- END OF SIDE MENU -->
             </div>
             <!-- END OF MENU -->
             
             <!-- LOGO -->
-            <img src="img/logo.png" alt="logo" class="logo">
+            <div class="logo-container order-md-2">
+                <img src="img/logo.png" alt="logo" class="logo">
+                <div class="inverse-logo-container d-flex justify-content-center align-items-center">                    
+                    <img src="img/logo-inverse.png" alt="logo" class="logo-inverse">
+                </div>
+            </div>
             <!-- END OF LOGO -->
 
             <!-- SEARCH -->
-            <div class="search-container">
-                <div class="search-icon"></div>
+            <div class="search-container order-md-3">
+                <div class="search-icon active"></div>
                 
                 <!-- SEARCH MENU -->
-                <div class="search-menu bg-primary d-flex align-items-center justify-content-between">
+                <div class="search-menu bg-primary order-md-3 d-flex align-items-center justify-content-between">
                     <textarea placeholder="Search..." class="d-flex align-items-center" style="overflow:hidden"></textarea>
                     <div class="search-icon search-menu-icon"></div>
                 </div>
@@ -92,7 +97,7 @@
 
 
             <!-- LANGUAGE -->
-            <div class="language-container">
+            <div class="language-container order-md-4">
                 <div class="language-icon text-primary bg-dark d-flex justify-content-center align-items-center">en</div>
 
                 <!-- LANGUAGE MENU -->
@@ -108,13 +113,13 @@
             <!-- END OF LANGUAGE -->
 
             <!-- CONTACT -->            
-            <div class="contact-container">
+            <div class="contact-container order-md-1">
                 <div class="contact-btn d-flex align-items-center justify-content-center">
                     <div class="contact-icon bg-secondary"></div>
                 </div>
 
                 <!-- CONTACT MENU -->
-                <div class="contact-menu bg-primary d-flex flex-column align-items-center justify-content-center">
+                <div class="contact-menu bg-primary d-flex flex-column align-items-center justify-content-center align-items-md-start">
                     <p class="text-danger"><span class="font-weight-bold text-dark">Call us:</span> +1 (844) 123 456 78</p>
                     <p class="text-danger">info@demolink.org</p>
                 </div>
@@ -124,21 +129,25 @@
         </nav>
 
     <!-- HEADER SLIDER -->
-    <div class="header-slider bg-success">
-        <div class="header-slider-left sides d-flex flex-column align-items-center align-items-sm-start justify-content-center active">
-            <h1 class="header-title text-capitalize text-primary">enjoy scuba diving with us</h1>
-            <h2 class="header-description">We offer a wide variety of scuba diving tours and locations for everyone.</h2>
-            <button class="read-more-btn bg-success text-secondary font-weight-bold">READ MORE</button>
+    <div class="header-slider">
+        <div class="header-slider-left header-slider-side d-flex flex-column align-items-center align-items-sm-start justify-content-center active">
+            <div class="header-slider-side-text">
+                <h1 class="header-title text-capitalize text-primary">enjoy scuba diving with us</h1>
+                <h2 class="header-description">We offer a wide variety of scuba diving tours and locations for everyone.</h2>
+                <button class="read-more-btn bg-success text-secondary font-weight-bold">READ MORE</button>
+            </div>
         </div>
-        <div class="header-slider-right sides d-flex flex-column align-items-center align-items-sm-start  justify-content-center">
-            <h1 class="header-title text-capitalize text-primary">best equipment and instructors</h1>
-            <h2 class="header-description">Our team and the top-notch equipment guarantee unforgettable diving.</h2>
-            <button class="read-more-btn bg-success text-seco font-weight-bold">READ MORE</button>
+        <div class="header-slider-right header-slider-side d-flex flex-column align-items-center align-items-sm-start  justify-content-center">
+            <div class="header-slider-side-text">
+                <h1 class="header-title text-capitalize text-primary">best equipment and instructors</h1>
+                <h2 class="header-description">Our team and the top-notch equipment guarantee unforgettable diving.</h2>
+                <button class="read-more-btn bg-success text-seco font-weight-bold">READ MORE</button>
+            </div>
         </div>
-    </div>
-    <div class="header-slider-buttons-container d-flex justify-content-center align-items-center">
-        <div class="header-slider-button active bg-primary"></div>
-        <div class="header-slider-button bg-primary"></div>
+        <div class="header-slider-buttons-container d-flex justify-content-center align-items-center">
+            <div class="header-slider-button active bg-primary"></div>
+            <div class="header-slider-button bg-primary"></div>
+        </div>
     </div>
     <!-- END OF HEADER SLIDER -->
     </header>
@@ -147,21 +156,33 @@
     <section class="destinations text-center">
         <h2 class="destinations-title">Destinations</h2>
         <div class="destinations-items-container d-flex">
-            <div class="destinations-item text-center active">
-                <img src="img/destination-img.jpg" alt="maldives">
-                <h3 class="destinations-item-title">Maldives</h3>
+            <div class="destinations-item text-center">
+                <a href="#">
+                    <img src="img/destination-img.jpg" alt="maldives">
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <h3 class="destinations-item-title text-secondary">Maldives</h3>
+                </a>
                 <h4 class="destinations-item-description text-info">True abundance of marine life</h4>
                 <a href="#" class="book-now-btn text-info font-weight-bold">BOOK NOW</a>
             </div>
             <div class="destinations-item destinations-item-hidden text-center">
-                <img src="img/destination-img2.jpg" alt="indonesia">
-                <h3 class="destinations-item-title">Indonesia</h3>
+                <a href="#">
+                    <img src="img/destination-img2.jpg" alt="indonesia">
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <h3 class="destinations-item-title text-secondary">Indonesia</h3>
+                </a>
                 <h4 class="destinations-item-description text-info">Unique marine diversity</h4>
                 <a href="#" class="book-now-btn text-info font-weight-bold">BOOK NOW</a>
             </div>
             <div class="destinations-item destinations-item-hidden text-center">
-                <img src="img/destination-img3.jpg" alt="australia">
-                <h3 class="destinations-item-title">Australia</h3>
+                <a href="#">
+                    <img src="img/destination-img3.jpg" alt="australia">
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <h3 class="destinations-item-title text-secondary">Australia</h3>
+                </a>
                 <h4 class="destinations-item-description text-info">The world’s top scuba destination</h4>
                 <a href="#" class="book-now-btn text-info font-weight-bold">BOOK NOW</a>
             </div>
@@ -362,53 +383,96 @@
     <!-- GALLERY -->
     <section class="gallery text-center container-fluid">
         <h2 class="gallery-title">Gallery</h2>
-            <div class="gallery-img-container">
-                <div class="gallery-img">
-                    <img src="img/gallery.jpg" alt="gallery-img">
-                    <h3>Barracuda Point</h3>
-                    <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row ">
+                    <div class="gallery-img-container col-md-12">
+                        <div class="gallery-img">
+                            <img src="img/gallery.jpg" alt="gallery-img">
+                            <div class="img-description d-flex flex-column justify-content-center d-flex flex-column justify-content-center">
+                                <a href="#" >
+                                    <h3 class="text-secondary">Barracuda Point</h3>
+                                </a>
+                                <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-img-container col-md-12">
+                        <div class="gallery-img">
+                            <img src="img/gallery3.jpg" alt="gallery-img">
+                            <div class="img-description d-flex flex-column justify-content-center">
+                                <a href="#" >
+                                    <h3 class="text-secondary">The Yongala</h3>
+                                </a>
+                                <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="gallery-img-container">
-                <div class="gallery-img">
-                    <img src="img/gallery2.jpg" alt="gallery-img">
-                    <h3>Blue Corner Wall</h3>
-                    <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+            <div class="col-md-4">
+                <div class="gallery-img-container">
+                    <div class="gallery-img">
+                        <img src="img/gallery2.jpg" alt="gallery-img">
+                        <div class="img-description d-flex flex-column justify-content-center">
+                            <a href="#" >
+                                <h3 class="text-secondary">Blue Corner Wall</h3>
+                            </a>
+                            <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="gallery-img-container col-md-12">
+                        <div class="gallery-img">
+                            <img src="img/gallery4.jpg" alt="gallery-img">
+                            <div class="img-description d-flex flex-column justify-content-center">
+                                <a href="#" >
+                                    <h3 class="text-secondary">Thistlegorm</h3>
+                                </a>
+                                <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-img-container col-md-12">
+                        <div class="gallery-img">
+                            <img src="img/gallery5.jpg" alt="gallery-img">
+                            <div class="img-description d-flex flex-column justify-content-center">
+                                <a href="#" >
+                                    <h3 class="text-secondary">Shark and Yolanda Reef</h3>
+                                </a>
+                                <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="gallery-img-container">
+        </div>
+
+        <div class="row">
+            <div class="gallery-img-container col-md-4">
                 <div class="gallery-img">
-                    <img src="img/gallery3.jpg" alt="gallery-img">
-                    <h3>The Yongala</h3>
-                    <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+                    <img src="img/gallery6.jpg" alt="gallery-img">
+                    <div class="img-description d-flex flex-column justify-content-center">
+                        <a href="#" >
+                            <h3 class="text-secondary">Manta Ray Night Dive</h3>
+                        </a>
+                        <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+                    </div>
                 </div>
             </div>
-        <div class="gallery-img-container">
-            <div class="gallery-img">
-                <img src="img/gallery4.jpg" alt="gallery-img">
-                <h3>Thistlegorm</h3>
-                <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
-            </div>
-        </div>
-        <div class="gallery-img-container">
-            <div class="gallery-img">
-                <img src="img/gallery5.jpg" alt="gallery-img">
-                <h3>Shark and Yolanda Reef</h3>
-                <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
-            </div>
-        </div>
-        <div class="gallery-img-container">
-            <div class="gallery-img">
-                <img src="img/gallery6.jpg" alt="gallery-img">
-                <h3>Manta Ray Night Dive</h3>
-                <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
-            </div>
-        </div>
-        <div class="gallery-img-container">
-            <div class="gallery-img">
-                <img src="img/gallery7.jpg" alt="gallery-img">
-                <h3>Great Blue Hole</h3>
-                <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+            <div class="gallery-img-container col-md-8">
+                <div class="gallery-img">
+                    <img src="img/gallery7.jpg" alt="gallery-img">
+                    <div class="img-description d-flex flex-column justify-content-center">
+                        <a href="#" >
+                            <h3 class="text-secondary">Great Blue Hole</h3>
+                        </a>
+                        <div class="search-icon-container bg-dark d-flex align-items-center justify-content-center"><div class="gallery-search-icon"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
     
@@ -435,7 +499,9 @@
         <h2 class="instructors-title">Instructors</h2>
         <div class="instructors-items-container d-flex flex-column flex-md-row">
             <div class="instructors-item active text-center">
-                <img src="img/instructors1.jpg" alt="portrait">
+                <a href="#">
+                    <img src="img/instructors1.jpg" alt="portrait">
+                </a>
                 <a href="#"><h3>Peter Martinez</h3></a>
                 <p class="text-info">Peter is PADI Course Director and our company’s Founder</p>
                 <div class="social-icons-container">
@@ -446,7 +512,9 @@
                 </div>
             </div>
             <div class="instructors-item instructors-item-hidden text-center">
-                <img src="img/instructors2.jpg" alt="portrait">
+                <a href="#">
+                    <img src="img/instructors2.jpg" alt="portrait">
+                </a>
                 <a href="#"><h3>Jane McMillan</h3></a>
                 <p class="text-info">Jane is Divers’s Specialty Instructor Trainer who joined us in 2010.</p>
                 <div class="social-icons-container">
@@ -457,7 +525,9 @@
                 </div>
             </div>
             <div class="instructors-item instructors-item-hidden text-center">
-                <img src="img/instructors3.jpg" alt="portrait">
+                <a href="#">
+                    <img src="img/instructors3.jpg" alt="portrait">
+                </a>
                 <a href="#"><h3>John Smith</h3></a>
                 <p class="text-info">John has been working with us since day one as PADI Divemaster.</p>
                 <div class="social-icons-container">
@@ -468,7 +538,9 @@
                 </div>
             </div>
             <div class="instructors-item instructors-item-hidden text-center">
-                <img src="img/instructors4.jpg" alt="portrait">
+                <a href="#">
+                    <img src="img/instructors4.jpg" alt="portrait">
+                </a>
                 <a href="#"><h3>Sam Williams</h3></a>
                 <p class="text-info">Sam is Divers’s PADI Open Water Scuba Instructor.</p>
                 <div class="social-icons-container">
@@ -491,20 +563,20 @@
     <!-- BLOG -->
     <Section class="blog">
         <h2 class="blog-title text-center">Our Blog</h2>
-        <div class="blog-items-container bg-primary">
-            <div class="blog-item active">
+        <div class="blog-items-container d-flex flex-column flex-md-row justify-content-center">
+            <div class="blog-item bg-primary">
                 <a href="#"><img src="img/blog.jpg" alt="blog-img"></a>
                 <h4 class="blog-date text-info">August 9, 2019</h4>
                 <a href="#"><h3 class="text-secondary">New Caledonia: The Lagoon of All Hopes</h3></a>                
                 <p class="text-info">As we dived for the very first time in the lagoon of New Caledonia, at Duck Island, with only our masks and fins...</p>
             </div>
-            <div class="blog-item blog-item-hidden">
+            <div class="blog-item blog-item-hidden bg-primary">
                 <a href="#"><img src="img/blog2.jpg" alt="blog-img"></a>
                 <h4 class="blog-date text-info">August 9, 2019</h4>
                 <a href="#"><h3 class="text-secondary">Scuba Diving in Okinawa: A First-timer Guide</h3></a>                
                 <p class="text-info">It is one of these places where it is not so straightforward to organize a scuba diving trip. There are so many...</p>
             </div>
-            <div class="blog-item blog-item-hidden">
+            <div class="blog-item blog-item-hidden bg-primary">
                 <a href="#"><img src="img/blog3.jpg" alt="blog-img"></a>
                 <h4 class="blog-date text-info">August 9, 2019</h4>
                 <a href="#"><h3 class="text-secondary">Shore Diving in Maui & Big Island</h3></a>                
@@ -521,56 +593,68 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-items-container">
-            <div class="footer-item footer-item-gallery">
+        <div class="footer-items-container d-flex flex-column flex-lg-row">
+            <div class="footer-item footer-item-gallery d-flex flex-column align-items-lg-start">
                 <h2 class="gallery-title text-primary text-center">Gallery</h2>
                 <div class="img-container row">
-                    <img class="img-item col-4" src="img/footer-img.jpg" alt="gallery-img">
-                    <img class="img-item col-4" src="img/footer-img2.jpg" alt="gallery-img">
-                    <img class="img-item col-4" src="img/footer-img3.jpg" alt="gallery-img">
-                    <img class="img-item col-4" src="img/footer-img4.jpg" alt="gallery-img">
-                    <img class="img-item col-4" src="img/footer-img5.jpg" alt="gallery-img">
-                    <img class="img-item col-4" src="img/footer-img6.jpg" alt="gallery-img"> 
+                    <img class="img-item col-4 col-sm-2 col-lg-4" src="img/footer-img.jpg" alt="gallery-img">
+                    <img class="img-item col-4 col-sm-2 col-lg-4" src="img/footer-img2.jpg" alt="gallery-img">
+                    <img class="img-item col-4 col-sm-2 col-lg-4" src="img/footer-img3.jpg" alt="gallery-img">
+                    <img class="img-item col-4 col-sm-2 col-lg-4" src="img/footer-img4.jpg" alt="gallery-img">
+                    <img class="img-item col-4 col-sm-2 col-lg-4" src="img/footer-img5.jpg" alt="gallery-img">
+                    <img class="img-item col-4 col-sm-2 col-lg-4" src="img/footer-img6.jpg" alt="gallery-img"> 
                 </div>
             </div>
-            <div class="footer-item footer-item-links container">
-                <h2 class="links-title text-primary text-center">Quick Links</h2>
-                <div class="list-container row">
-                    <ul class="col-6">
-                        <a href="#"><li>About Us</li></a>
-                        <a href="#"><li>What We Offer</li></a>
-                        <a href="#"><li>FAQ</li></a>
-                        <a href="#"><li>Instructors</li></a>                
-                    </ul>
-                    <ul class="col-6">
-                        <a href="#"><li>Contact Us</li></a>
-                        <a href="#"><li>Blog</li></a>
-                        <a href="#"><li>Gallery</li></a>
-                        <a href="#"><li>Pricing</li></a>                    
-                    </ul>
+            <div class="footer-item-links-contact d-flex flex-column flex-sm-row">
+                <div class="footer-item footer-item-links container">
+                    <h2 class="links-title text-primary text-center text-lg-left">Quick Links</h2>
+                    <div class="list-container row">
+                        <ul class="col-6 col-sm-12 col-md-6 mb-sm-0">
+                            <a href="#"><li>About Us</li></a>
+                            <a href="#"><li>What We Offer</li></a>
+                            <a href="#"><li>FAQ</li></a>
+                            <a href="#"><li>Instructors</li></a>                
+                        </ul>
+                        <ul class="col-6 col-sm-12 col-md-6">
+                            <a href="#"><li>Contact Us</li></a>
+                            <a href="#"><li>Blog</li></a>
+                            <a href="#"><li>Gallery</li></a>
+                            <a href="#"><li>Pricing</li></a>                    
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-item footer-item-contact text-center">
-                <h2 class="contact-title text-primary text-center">Get in touch</h2>
-                <div class="address">
-                    <i class="fas fa-map-marker-alt text-success"></i>
-                    <h4 class="text-primary">523 Sylvan Ave, 5th Floor
-                        Mountain View, CA 94041 USA</h4>
-                </div>
-                <div class="tel">
-                    <i class="fas fa-phone-alt text-success"></i>
-                    <h4 class="text-primary">+1 (844) 123 456 78</h4>
-                </div>
-                <div class="email">
-                    <i class="far fa-envelope text-success"></i>
-                    <h4 class="text-primary">info@demolink.org</h4>
-                </div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f text-secondary text-info"></i></a>
-                    <a href="#"><i class="fab fa-twitter text-secondary text-info"></i></a>
-                    <a href="#"><i class="fab fa-instagram text-secondary text-info"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g text-secondary text-info"></i></a> 
-                    <a href="#"><i class="fab fa-skype text-info"></i></a>                    
+                <div class="footer-item footer-item-contact text-center">
+                    <h2 class="contact-title text-primary text-center text-lg-left">Get in touch</h2>
+                    <div class="address d-flex flex-column flex-md-row text-md-left">
+                        <i class="fas fa-map-marker-alt text-success"></i>
+                        <h4 class="text-primary">523 Sylvan Ave, 5th Floor
+                            Mountain View, CA 94041 USA</h4>
+                    </div>
+                    <div class="tel d-flex flex-column flex-md-row text-md-left">
+                        <i class="fas fa-phone-alt text-success"></i>
+                        <h4 class="text-primary">+1 (844) 123 456 78</h4>
+                    </div>
+                    <div class="email d-flex flex-column flex-md-row text-md-left">
+                        <i class="far fa-envelope text-success"></i>
+                        <h4 class="text-primary">info@demolink.org</h4>
+                    </div>
+                    <div class="social-icons d-flex justify-content-center justify-content-md-start">
+                        <div class="social-icons-item">
+                            <a href="#"><i class="fab fa-facebook-f text-secondary text-info"></i></a>
+                        </div>
+                        <div class="social-icons-item">
+                            <a href="#"><i class="fab fa-twitter text-secondary text-info"></i></a>
+                        </div>
+                        <div class="social-icons-item">
+                            <a href="#"><i class="fab fa-instagram text-secondary text-info"></i></a>
+                        </div>
+                        <div class="social-icons-item">
+                            <a href="#"><i class="fab fa-google-plus-g text-secondary text-info"></i></a> 
+                        </div>
+                        <div class="social-icons-item">
+                            <a href="#"><i class="fab fa-skype text-info"></i></a>                    
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -601,6 +685,7 @@
     <script src="js/header.js"></script>  
     <script src="js/destinations.js"></script>
     <script src="js/divers.js"></script>
+    <script src="js/gallery.js"></script>
     <script src="js/testimonials.js"></script>
     <script src="js/instructors.js"></script>
     <script src="js/blog.js"></script>

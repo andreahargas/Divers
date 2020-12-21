@@ -63,11 +63,16 @@
       background: none;
       border: none;
       margin: auto;
+      outline: none;
       border-bottom: 1px solid map-get($colors, primary);
       width: 100%;
       margin-top: 2.6rem;
       padding-bottom: 0.5rem;
       color: map-get($colors, primary);
+
+      &:focus::placeholder {
+        opacity: 0;
+      }
 
       &::placeholder {
         color: map-get($colors, primary);
@@ -108,8 +113,6 @@
         width: 12rem;
         height: 4rem;
       }
-
-      
     }
   }
 }

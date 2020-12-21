@@ -6,14 +6,38 @@
 .blog-title {
   font-size: 1.375rem;
   padding: 2rem 0;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.875rem;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 2.75rem;
+  }
 }
 
 // SLIDER ITEMS //
 .blog-items-container {
   position: relative;
+  max-width: 1230px;
+  margin: auto;
 
   .blog-item {
     padding-bottom: 1rem;
+    cursor: pointer;
+
+    @include media-breakpoint-up(md) {
+      margin: 0 1rem;
+      width: 33%;
+      margin-bottom: 3rem;
+
+      transform: scale(1, 1);
+      @include transition;
+
+      &:hover {
+        transform: scale(1.05, 1.05);
+        @include transition;
+      }
+    }
 
     img {
       width: 100%;
@@ -23,16 +47,37 @@
       font-size: 0.8125rem;
       margin-top: 1rem;
       padding: 0 1rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 0.9375rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
     }
 
     h3 {
       font-size: 1rem;
       padding: 0 1rem;
+
+      &:hover {
+        color: map-get($colors, dark) !important;
+        @include transition;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.375rem;
+      }
     }
 
     p {
       font-size: 0.8125rem;
       padding: 0 1rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 0.9375rem;
+      }
     }
 
     &.active {
@@ -57,6 +102,11 @@
     position: absolute;
     top: 0;
     transform: translateX(110%);
+
+    @include media-breakpoint-up(md) {
+      position: static;
+      transform: translate(0);
+    }
   }
 }
 // END OF SLIDER ITEMS //
@@ -65,6 +115,10 @@
 .blog-slider-buttons-container {
   width: 100%;
   height: 4.7rem;
+
+  @include media-breakpoint-up(md) {
+    display: none !important;
+  }
 
   .blog-slider-button {
     width: 15px;
