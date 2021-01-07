@@ -6,20 +6,20 @@
   @include media-breakpoint-up(md) {
     padding: 3rem 0;
   }
-}
 
-.destinations-title {
-  font-size: 1.375rem;
-  margin-top: 2rem;
+  &-title {
+    font-size: 1.375rem;
+    margin-top: 2rem;
 
-  @include media-breakpoint-up(md) {
-    font-size: 1.625rem;
-  }
-  @include media-breakpoint-up(lg) {
-    font-size: 1.875rem;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 2.75rem;
+    @include media-breakpoint-up(md) {
+      font-size: 1.625rem;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 1.875rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 2.75rem;
+    }
   }
 }
 
@@ -86,7 +86,7 @@
       }
     }
 
-    .destinations-item-title {
+    &-title {
       @include transition;
 
       &:hover {
@@ -108,7 +108,7 @@
       }
     }
 
-    .destinations-item-description {
+    &-description {
       font-size: 0.8rem;
       margin-top: 0.5rem;
 

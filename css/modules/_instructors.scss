@@ -1,17 +1,17 @@
 .instructors {
   padding-bottom: 2rem;
-}
 
-.instructors-title {
-  font-size: 1.375rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  &-title {
+    font-size: 1.375rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 
-  @include media-breakpoint-up(lg) {
-    font-size: 1.875rem;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 2.75rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.875rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 2.75rem;
+    }
   }
 }
 

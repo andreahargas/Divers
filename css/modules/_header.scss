@@ -122,6 +122,7 @@ header {
     width: 8px;
     height: 1.5px;
     transform: skewY(45deg);
+    @include transition;
   }
 
   @include media-breakpoint-up(md) {
@@ -446,7 +447,7 @@ header {
     }
   }
 
-  .search-menu-icon {
+  &-icon {
     margin-right: 1rem;
 
     &:hover {
@@ -554,7 +555,7 @@ header {
 // SLIDER //
 .header-slider {
 
-  .header-slider-side {
+  &-side {
     position: absolute;
     top: 0;
     text-align: center;
@@ -591,7 +592,7 @@ header {
       transition-duration: 0.4s;
     }
 
-    .header-slider-side-text {
+    &-text {
       width: 100%;
       max-width: 1230px;
       margin: auto;
@@ -684,14 +685,15 @@ header {
       }
     }
   }
-  .header-slider-left {
+
+  &-left {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url(../../img/header-img.jpg);
     background-size: cover;
     background-position: 50% 15%;
   }
 
-  .header-slider-right {
+  &-right {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url(../../img/header-img2.jpg);
     transform: translateX(100%);

@@ -9,110 +9,110 @@
   @include media-breakpoint-up(lg) {
     height: 21rem;
   }
+}
 
-  .newsletter-items-container {
-    max-width: 1230px;
-    margin: auto;
-    height: 100%;
+.newsletter-items-container {
+  max-width: 1230px;
+  margin: auto;
+  height: 100%;
+}
+
+.newsletter-text {
+  @include media-breakpoint-up(xl) {
+    text-align: left;
   }
 
-  .newsletter-text {
+  .newsletter-title {
+    font-size: 1.375rem;
+    padding-top: 3rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.625rem;
+      padding-top: 0;
+    }
     @include media-breakpoint-up(xl) {
-      text-align: left;
-    }
-
-    .newsletter-title {
-      font-size: 1.375rem;
-      padding-top: 3rem;
-
-      @include media-breakpoint-up(lg) {
-        font-size: 1.625rem;
-        padding-top: 0;
-      }
-      @include media-breakpoint-up(xl) {
-        font-size: 2.75rem;
-      }
-    }
-
-    h3 {
-      font-size: 0.8125rem;
-      margin-top: 1rem;
-
-      @include media-breakpoint-up(md) {
-        margin-bottom: 3rem;
-      }
-      @include media-breakpoint-up(lg) {
-        font-size: 0.94rem;
-      }
-      @include media-breakpoint-up(xl) {
-        margin: 0;
-      }
+      font-size: 2.75rem;
     }
   }
 
-  .input-container {
+  h3 {
+    font-size: 0.8125rem;
+    margin-top: 1rem;
+
     @include media-breakpoint-up(md) {
-      padding: 0 2rem;
+      margin-bottom: 3rem;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 0.94rem;
     }
     @include media-breakpoint-up(xl) {
-      padding-right: 0;
+      margin: 0;
+    }
+  }
+}
+
+.input-container {
+  @include media-breakpoint-up(md) {
+    padding: 0 2rem;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-right: 0;
+  }
+
+  input {
+    display: block;
+    background: none;
+    border: none;
+    margin: auto;
+    outline: none;
+    border-bottom: 1px solid map-get($colors, primary);
+    width: 100%;
+    margin-top: 2.6rem;
+    padding-bottom: 0.5rem;
+    color: map-get($colors, primary);
+
+    &:focus::placeholder {
+      opacity: 0;
     }
 
-    input {
-      display: block;
-      background: none;
-      border: none;
-      margin: auto;
-      outline: none;
-      border-bottom: 1px solid map-get($colors, primary);
-      width: 100%;
-      margin-top: 2.6rem;
-      padding-bottom: 0.5rem;
+    &::placeholder {
       color: map-get($colors, primary);
-
-      &:focus::placeholder {
-        opacity: 0;
-      }
-
-      &::placeholder {
-        color: map-get($colors, primary);
-      }
-
-      @include media-breakpoint-up(md) {
-        margin: 2rem 0;
-        margin-right: 2rem;
-      }
-
-      @include media-breakpoint-up(xl) {
-        width: 40rem;
-        margin-top: 0;
-      }
     }
 
-    button {
-      margin-top: 1rem;
-      margin-bottom: 3rem;
-      border: none;
-      letter-spacing: 0.1rem;
-      font-size: 0.875rem;
-      width: 100%;
-      padding: 0.6rem;
-      border-radius: 4px;
+    @include media-breakpoint-up(md) {
+      margin: 2rem 0;
+      margin-right: 2rem;
+    }
 
-      &:hover {
-        color: map-get($colors, primary) !important;
-        background-color: map-get($colors, dark) !important;
-        @include transition;
-      }
+    @include media-breakpoint-up(xl) {
+      width: 40rem;
+      margin-top: 0;
+    }
+  }
 
-      @include media-breakpoint-up(md) {
-        margin: 2rem 0;
-        width: 40%;
-      }
-      @include media-breakpoint-up(xl) {
-        width: 12rem;
-        height: 4rem;
-      }
+  button {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 0.875rem;
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 4px;
+
+    &:hover {
+      color: map-get($colors, primary) !important;
+      background-color: map-get($colors, dark) !important;
+      @include transition;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin: 2rem 0;
+      width: 40%;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 12rem;
+      height: 4rem;
     }
   }
 }

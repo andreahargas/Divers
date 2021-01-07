@@ -35,7 +35,7 @@
     width: 100%;
   }
 
-  .img-description {
+  &-description {
     background: map-get($colors, sectionBackground);
     padding: 0.5rem;
 
