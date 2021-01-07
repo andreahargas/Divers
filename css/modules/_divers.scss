@@ -104,11 +104,13 @@
     }
 
     i {
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
       margin-right: 1rem;
       color: map-get($colors, dark);
       font-size: 0.75rem;
-      padding: 0.5rem;
-      border-radius: 20px;
+      border-radius: 50%;
       box-shadow: 0px 0px 5px map-get($colors, light);
       transform: rotate(-90deg);
       @include transition;
