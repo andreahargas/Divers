@@ -6,11 +6,8 @@ header {
 
   @include media-breakpoint-up(md) {
     margin-top: 0;
-    height: 40rem;
+    height: 90vh;
     padding-top: 1.5rem;
-  }
-  @include media-breakpoint-up(lg) {
-    height: 53rem;
   }
 }
 
@@ -181,6 +178,7 @@ header {
     z-index: 1;
 
     @include media-breakpoint-up(md) {
+      font-weight: 600;
       background: map-get($colors, primary) !important;
       color: map-get($colors, secondary) !important;
     }
@@ -502,6 +500,7 @@ header {
     li.language {
       padding: 0.25em;
       cursor: pointer;
+      font-weight: 600;
 
       &.active {
         background-color: map-get($colors, dark);
@@ -565,20 +564,13 @@ header {
     top: 0;
     text-align: center;
     z-index: -1;
-    height: 75vh;
+    height: 100%;
     width: 100%;
     padding: 0 10%;
     background: red;
 
     @include media-breakpoint-up(sm) {
       text-align: left;
-    }
-
-    @include media-breakpoint-up(md) {
-      height: 40rem;
-    }
-    @include media-breakpoint-up(lg) {
-      height: 53rem;
     }
 
     &.active {
@@ -716,10 +708,7 @@ header {
   z-index: -1;
 
   @include media-breakpoint-up(md) {
-    top: 31rem;
-  }
-  @include media-breakpoint-up(lg) {
-    top: 43rem;
+    top: 75vh;
   }
 
   .header-slider-button {
